@@ -1,5 +1,9 @@
 # CS 122 Spring 2026 Midterm Study Guide
 
+---
+
+## Words from Professor
+
 Hello everyone,
 
 Here is a study guide to help you prepare for our upcoming midterm exam. The goal of this guide is not to provide all the answers, but to structure your review of the material we have covered so far. A strong understanding of these topics will prepare you well for both sections of the exam.
@@ -11,8 +15,8 @@ Here is a study guide to help you prepare for our upcoming midterm exam. The goa
   - You will be **ALLOWED to reference notes (or notecards), textbook, slides, past labs, assignments, Midterm Study Guide Packet(What's inside this repo) for this portion.**
   - However, you are **NOT ALLOWED to use online resources (including AI) or collaborate with others during the exam.**
   - Since this portion is open-book:
-    - Expect the difficulty to be higher than the coding exercises we've done in class, so be sure to practice writing code on your own without relying on copy-pasting from previous work.
-    - Starter code may be provided BUT like we discussed about Lab6, always make sure you ask questions if there's any doubt and make your own judgement on how to approach the problem. Don't assume the starter code will be complete or perfectly aligned with the question.
+    - Expect the difficulty to be greater than the coding exercises we've done in class, so be sure to practice writing code on your own without relying on copy-pasting from previous work.
+    - Starter code may be provided BUT as we discussed about Lab6, always make sure you ask questions if there's any doubt and make your own judgement on how to approach the problem. Don't assume the starter code will be complete or perfectly aligned with the question.
     - Also be mindful of the time limit and possible heavy workload, so practice writing code efficiently and clearly.
 
 Use this guide to identify areas where you feel confident and topics that may require more of your attention.
@@ -30,6 +34,16 @@ Good luck with your studies!
 Best,
 
 Prof. Sarah L
+
+---
+
+## Getting Started
+
+1. **Fork this repository.** Click the **Fork** button at the top-right of this page to create your own copy of the repo under your GitHub account. This ensures you have full access to all the files and can make changes without affecting the original.
+
+2. **Download or clone your fork.** Once you've forked the repo, you have two options:
+   - **Download as ZIP:** In your copy of the repo, click the green **Code** button and select **Download ZIP**. Extract the files and open them in your IDE.
+   - **Clone with GitHub Desktop:** Open GitHub Desktop, go to **File → Clone Repository**, and search for or paste the URL of your forked repo. This will clone the repo to your machine so you can interact with and "play" with the files locally.
 
 ---
 
