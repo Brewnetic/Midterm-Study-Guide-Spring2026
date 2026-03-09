@@ -28,16 +28,13 @@
  * ======================================================================================
  */
 
-// LECTURE 9: PACKAGES
-// The 'import' statement brings in code from other packages.
-// `Scanner` is in `java.util`, and we need it for user input.
 import java.util.Scanner;
 
-// LECTURE 1: CLASSES
+// LECTURE 2: CLASSES
 // Every Java program is contained within a class. This is our main application class.
 public class MidtermStudyGuide {
 
-    // LECTURE 1: THE 'main' METHOD
+    // LECTURE 2: THE 'main' METHOD
     // This is the special method where program execution begins.
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -50,7 +47,7 @@ public class MidtermStudyGuide {
         System.out.println("==============================================");
         System.out.println("Prove your midterm readiness, recruit!");
 
-        // LECTURE 5: THE 'while' LOOP
+        // LECTURE 6: THE 'while' LOOP
         // This loop keeps the main menu running until the user chooses to exit.
         while (isGauntletActive) {
             printMenu();
@@ -58,7 +55,7 @@ public class MidtermStudyGuide {
             int choice = scanner.nextInt();
             scanner.nextLine(); // Consume the newline character after reading the integer.
 
-            // LECTURE 5: THE 'switch' STATEMENT
+            // LECTURE 6: THE 'switch' STATEMENT
             // This directs the program to the correct module based on user input.
             switch (choice) {
                 case 1:
@@ -93,7 +90,7 @@ public class MidtermStudyGuide {
         scanner.close();
     }
 
-    // LECTURE 7: METHODS
+    // LECTURE 5: METHODS
     // A static void method to print the main menu.
     public static void printMenu() {
         System.out.println("\n========= TRAINING MODULES =========");
@@ -105,7 +102,7 @@ public class MidtermStudyGuide {
         System.out.println("====================================");
     }
 
-    // Module 1: Covers Lectures 1-2 on Java basics, variables, and input.
+    // Module 1: Covers L2-Hello Java/Intro to Java, L3-Variables, Data Types, Getting Inputs
     public static int runBootcampBasics(Scanner scanner) {
         System.out.println("\n--- Module 1: Bootcamp Basics ---");
         int xp = 0;
@@ -136,7 +133,7 @@ public class MidtermStudyGuide {
         return xp;
     }
 
-    // Module 2: Covers Lecture 3 on operators, formatting, and Strings.
+    // Module 2: Covers L4-Data Types, String Operations, and Formatting
     public static int runOperatorObstacleCourse(Scanner scanner) {
         System.out.println("\n--- Module 2: Operator Obstacle Course ---");
         int xp = 0;
@@ -179,7 +176,7 @@ public class MidtermStudyGuide {
         return xp;
     }
 
-    // Module 3: Covers Lectures 4-5 on control flow and arrays.
+    // Module 3: Covers L5-Arrays, Custom Methods, and Parameters, L6-Control Flow
     public static int runLogicAndRepetitionDrills(Scanner scanner) {
         System.out.println("\n--- Module 3: Logic & Repetition Drills ---");
         int xp = 0;
@@ -208,7 +205,7 @@ public class MidtermStudyGuide {
         return xp;
     }
 
-    // Module 4: Covers Lectures 6-9 on all OOP concepts.
+    // Module 4: Covers L7-Intro to OOP, L8-Encapsulation, Inheritance, and Abstraction, L9-Interface and Polymorphism
     public static int runObjectOrientedSimulation(Scanner scanner) {
         System.out.println("\n--- Module 4: Object-Oriented Simulation ---");
         System.out.println("This module will run a simulation using the Agent classes you completed.");
@@ -268,7 +265,7 @@ public class MidtermStudyGuide {
 }
 
 // ======================================================================================
-// GAUNTLET BLUEPRINTS: AGENT CLASSES (Lectures 6-9)
+// GAUNTLET BLUEPRINTS: AGENT CLASSES (Lectures 7-9)
 // Complete these classes to make Module 4 function correctly.
 // ======================================================================================
 

@@ -1,10 +1,18 @@
-# CS122 Labs 01-09: Common Mistakes & Lessons Learned
+# CS122 Labs 1-9: Common Mistakes & Lessons Learned
 
 ## A Companion Guide to Your Midterm Review
 
-**Purpose**: This document highlights the most frequent mistakes made during Labs 01-09. Use it alongside your Midterm Review Guide to identify pitfalls and strengthen your understanding.
+**Purpose**: This document highlights the most frequent mistakes made during Labs 1-9. Use it alongside your Midterm Review Guide to identify pitfalls and strengthen your understanding.
 
 > Note: Every example here comes from actual student work. These are anonymous mistakes that many of you made. Learning from them will help you avoid similar errors on your midterm!
+
+**Midterm Review — Module & Lecture Mapping:**
+
+- **Module 2:** L2-Hello Java/Intro to Java, L3-Variables, Data Types, Getting Inputs
+- **Module 3:** L4-Data Types, String Operations, and Formatting, L5-Arrays, Custom Methods, and Parameters
+- **Module 4:** L6-Control Flow
+- **Module 5:** L7-Intro to OOP in Java
+- **Module 6:** L8-Encapsulation, Inheritance, and Abstraction, L9-Interface and Polymorphism
 
 ---
 
@@ -17,7 +25,7 @@
 
 ---
 
-## 1. Introduction to Java (Related to: Review Guide Section 1)
+## 1. Introduction to Java (L2 | Review Guide Section 1)
 
 ### Mistake #1: print() vs println()
 
@@ -61,7 +69,7 @@ Professor Lin
 
 ---
 
-## 2. Variables, Data Types, and Input (Review Guide Section 2)
+## 2. Variables, Data Types, and Input (L3 | Review Guide Section 2)
 
 ### Mistake #3: The Buffer Problem (90% of students got this wrong!)
 
@@ -133,7 +141,7 @@ String fullName = scanner.next(); // Only reads ONE word!
 
 ---
 
-## 3. Operators and Type Casting (Review Guide Section 3)
+## 3. Operators and Type Casting (L4 | Review Guide Section 3)
 
 ### Mistake #5: Integer Division Losing Decimals
 
@@ -193,7 +201,7 @@ System.out.println("Total: " + (5 + 3)); // Parentheses force addition first
 
 ---
 
-## 4. Strings and Core Methods (Review Guide Section 4)
+## 4. Strings and Core Methods (L4 | Review Guide Section 4)
 
 ### Mistake #7: Finding File Extensions with indexOf()
 
@@ -252,7 +260,7 @@ String part = email.substring(4, 9); // "apple" only
 
 ---
 
-## 5. Control Flow (Review Guide Section 5)
+## 5. Control Flow (L6 | Review Guide Section 5)
 
 ### Mistake #9: Using = Instead of ==
 
@@ -386,7 +394,7 @@ while (!password.equals("secret")) {  // Correct!
 
 ---
 
-## 6. Arrays (Review Guide Section 6)
+## 6. Arrays (L5 | Review Guide Section 6)
 
 ### Mistake #14: Array Index Out of Bounds
 
@@ -471,7 +479,7 @@ for (int i = 0; i < 5; i++) {
 
 ---
 
-## 7. Methods (Review Guide Section 7)
+## 7. Methods (L5 | Review Guide Section 7)
 
 ### Mistake #17: Defining Methods Inside main()
 
@@ -553,7 +561,7 @@ public static double calculateArea(double length, double width) {
 
 ---
 
-## 8. Introduction to OOP (Review Guide Section 8)
+## 8. Introduction to OOP (L7 | Review Guide Section 8)
 
 ### Mistake #19: Forgetting to Instantiate Objects
 
@@ -679,7 +687,7 @@ class Student {  // Remove "public"
 
 ---
 
-## 9. The Four Pillars of OOP (Review Guide Section 9)
+## 9. The Four Pillars of OOP (L8, L9 | Review Guide Section 9)
 
 ### Mistake #23: Not Understanding Static
 
@@ -883,143 +891,7 @@ band[2] = new LeadGuitarist();  // Works!
 
 ---
 
-## 10. Data & Organization (Review Guide Section 10)
-
-### Mistake #30: Not Following POJO Structure
-
-**What Happened:**
-
-```java
-// NOT a proper POJO
-class GameItem {
-    public String name;  // Should be private!
-    public int power;    // Should be private!
-}
-```
-
-**Proper POJO:**
-
-```java
-class GameItem {
-    // 1. Private fields
-    private String name;
-    private Integer powerLevel;
-
-    // 2. Default constructor
-    public GameItem() {
-        this.name = "Unknown";
-        this.powerLevel = null;
-    }
-
-    // 3. Getters
-    public String getName() { return name; }
-    public Integer getPowerLevel() { return powerLevel; }
-
-    // 4. Setters
-    public void setName(String name) { this.name = name; }
-    public void setPowerLevel(Integer powerLevel) {
-        this.powerLevel = powerLevel;
-    }
-}
-```
-
-**POJO Checklist:**
-
-- ✅ Private fields
-- ✅ Public getters
-- ✅ Public setters
-- ✅ Default constructor
-
----
-
-### Mistake #31: Parsing Strings to Numbers
-
-**What Happened:**
-
-```java
-System.out.print("Power level: ");
-String input = scanner.nextLine();
-Integer powerLevel = input;  // ERROR! Can't assign String to Integer!
-```
-
-**The Fix:**
-
-```java
-System.out.print("Power level: ");
-String input = scanner.nextLine();
-Integer powerLevel = Integer.parseInt(input);  // Parse it!
-```
-
-**Common Parsing Methods:**
-
-- `Integer.parseInt(string)` → int
-- `Double.parseDouble(string)` → double
-- `Boolean.parseBoolean(string)` → boolean
-
----
-
-### Mistake #32: ArrayList vs Array Operations
-
-**What Happened:**
-
-```java
-ArrayList<String> playlist = new ArrayList<String>();
-
-// Treating it like an array:
-playlist[0] = "Song 1";  // ERROR!
-String song = playlist[2];  // ERROR!
-```
-
-**The Fix:**
-
-```java
-ArrayList<String> playlist = new ArrayList<String>();
-
-// Use ArrayList methods:
-playlist.add("Song 1");        // Add to list
-String song = playlist.get(0); // Get from list
-int size = playlist.size();    // Get size (not .length!)
-playlist.remove(2);            // Remove element
-```
-
-**Remember:**
-
-- Arrays: `[]` brackets, `.length`
-- ArrayList: methods (`.add()`, `.get()`, `.size()`)
-
----
-
-### Mistake #33: Import Statement Placement
-
-**What Happened:**
-
-```java
-public class Lab09 {
-    import java.util.ArrayList;  // ERROR! Too late!
-
-    public static void main(String[] args) { }
-}
-```
-
-**Error Message:** `<identifier> expected`
-
-**The Fix:**
-
-```java
-import java.util.ArrayList;  // BEFORE the class!
-
-public class Lab09 {
-    public static void main(String[] args) {
-        ArrayList<String> list = new ArrayList<String>();
-    }
-}
-```
-
-**Rule:** ALL imports go at the TOP of the file, BEFORE the class declaration!
-
----
-
-## Top 10 Most Common Mistakes Across Labs 01-09
+## Top 10 Most Common Mistakes Across Labs 1-9
 
 1. **Buffer Problem** (90% of students) - Not clearing buffer after `nextInt()`/`nextDouble()`
 2. **String Comparison with ==** (70% of students) - Must use `.equals()` instead
