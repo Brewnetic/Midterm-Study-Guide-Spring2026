@@ -952,6 +952,20 @@ abstract void method();  ← No body in abstract class
 public void method() { } ← Must implement in concrete class
 ```
 
+### Java Loops
+
+| Loop | Condition Checked | Guaranteed to Run? | Best Used When... |
+|------|------------------|-------------------|-------------------|
+| `for` | Before each iteration | No | You know exactly how many times to loop |
+| `while` | Before each iteration | No | You loop an unknown number of times, may skip entirely |
+| `do-while` | After each iteration | **Yes, at least once** | You must run the body first, then decide to continue |
+| `for-each (`for :`)` | N/A | No | Iterating over an array or collection, no index needed |
+
+- `for` → *"I know the count"*
+- `while` → *"I'll keep going if..."*
+- `do-while` → *"Do it first, ask questions later"*
+- `for-each` → *"Give me everything in this list"*
+
 ---
 
 ## Final Tips for Studying
